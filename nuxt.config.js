@@ -46,7 +46,17 @@ export default {
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
   ],
+
+  /*
+  ** Style resources
+  */
+  styleResources: {
+    scss: [
+      '~/assets/scss/*/*.scss',
+    ],
+  },
 
   /*
   ** Build configuration
