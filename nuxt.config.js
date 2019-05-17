@@ -47,6 +47,27 @@ export default {
     '@nuxtjs/bulma',
     '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
+    [ 'nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+        {
+          set: '@fortawesome/free-brands-svg-icons',
+          icons: [
+          ],
+        },
+        {
+          set: '@fortawesome/free-regular-svg-icons',
+          icons: [
+          ],
+        },
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: [
+          ],
+        },
+      ],
+    }],
+    'nuxt-webfontloader',
   ],
 
   /*
@@ -56,6 +77,22 @@ export default {
     scss: [
       '~/assets/scss/*/*.scss',
     ],
+  },
+
+  /*
+  ** Web font loader
+  */
+  webfontloader: {
+    google: {
+      families: [
+        'Scheherazade',
+        'Neuton',
+        'Lato:300',
+        'PT+Sans',
+        'Poppins:300,400',
+        'Roboto:300,400,500,700',
+      ],
+    },
   },
 
   /*
