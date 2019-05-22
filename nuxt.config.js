@@ -37,6 +37,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~plugins/vue-carousel.js', mode: 'client' },
   ],
 
   /*
@@ -53,16 +54,34 @@ export default {
         {
           set: '@fortawesome/free-brands-svg-icons',
           icons: [
+            'faFacebookF',
+            'faInstagram',
+            'faLinkedinIn',
+            'faGooglePlusG',
+            'faTwitter',
+            'faDribbble',
           ],
         },
         {
           set: '@fortawesome/free-regular-svg-icons',
           icons: [
+            'faStar',
+            'faTimesCircle',
           ],
         },
         {
           set: '@fortawesome/free-solid-svg-icons',
           icons: [
+            'faArrowDown',
+            'faCaretRight',
+            'faChevronLeft',
+            'faChevronRight',
+            'faEnvelope',
+            'faGraduationCap',
+            'faPhone',
+            'faShareAlt',
+            'faStar',
+            'faTools',
           ],
         },
       ],
