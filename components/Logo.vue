@@ -12,4 +12,22 @@
 </template>
 
 <style lang="scss">
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calculate-rem(120);
+    height: calculate-rem(40);
+    background: $color-name--black;
+    border: 2px solid $color-name--white;
+
+    @include mq($from: xl) {
+      width: calculate-rem(150);
+      height: calculate-rem(50);
+    }
+
+    img {
+      width: 80%;
+    }
+  }
 </style>
