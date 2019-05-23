@@ -11,3 +11,27 @@ $font-family--lato: ("Lato", sans-serif);
 $font-family--pt-sans: ("PT Sans", sans-serif);
 $font-family--poppins: ("Poppins", sans-serif);
 $font-family--roboto: ("Roboto", sans-serif);
+
+
+/// Color names and their shades divided by underscore,
+/// used by box shadows, gradients and functional variables
+///
+/// @access public
+///
+/// @author Radmir Nabiullin
+///
+/// @type Color
+$color-name--alto: #dddddd;
+$color-name--black: #000000;
+$color-name--chambray: #3b589a;
+$color-name--dusty-gray: #999999;
+$color-name--french-gray: #c4c4c5;
+$color-name--fuchsia-blue: #694fca;
+$color-name--gallery: #f0f0f0;
+$color-name--mine-shaft_base: #2c2c2c;
+$color-name--mine-shaft_dark: #212121;
+$color-name--silver-chalice: #a2a2a2;
+$color-name--tundora: #454545;
+$color-name--web-orange: #ffa800;
+$color-name--west-side: #ff8610;
+$color-name--white: #ffffff;

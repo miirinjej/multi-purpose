@@ -18,7 +18,7 @@
           alt="basket with pencils"
         >
       </picture>
-      <h2 class="honor-seciton__heading">
+      <h2 class="honor-seciton__heading heading">
         Honor the details
       </h2>
       <p class="honor-seciton__description">

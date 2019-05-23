@@ -1,6 +1,6 @@
 <template>
   <section class="we-love-section">
-    <h2 class="we-love-section__heading">
+    <h2 class="we-love-section__heading heading">
       We love our clients
     </h2>
     <p class="we-love-section__description">

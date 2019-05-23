@@ -1,6 +1,6 @@
 <template>
   <section class="top-section">
-    <h1 class="top-section__heading">
+    <h1 class="top-section__heading heading">
       Honor the details.
     </h1>
     <p class="top-section__description">

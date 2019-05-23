@@ -1,6 +1,6 @@
 <template>
   <section class="testimonials-section">
-    <h2 class="testimonials-section__heading">
+    <h2 class="testimonials-section__heading heading">
       Global company with a local feel.
     </h2>
     <p class="testimonials-section__description">

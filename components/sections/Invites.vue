@@ -4,7 +4,7 @@
       <div class="invites-section__number">
         01.
       </div>
-      <h2 class="invites-section__heading">
+      <h2 class="invites-section__heading heading">
         Invites active attention
       </h2>
       <p class="invites-section__description">
