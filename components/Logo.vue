@@ -21,9 +21,10 @@
     background: $color-name--black;
     border: 2px solid $color-name--white;
 
-    @include mq($from: xl) {
+    @include mq($from: 1088px) {
       width: calculate-rem(150);
       height: calculate-rem(50);
+      background: $color-name--cod-gray;
     }
 
     img {

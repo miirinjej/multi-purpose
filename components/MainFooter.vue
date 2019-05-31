@@ -6,6 +6,7 @@
         Call now: <a
           class="phone__link"
           href="tel:+0800456789"
+          target="_blank"
         >0800 456 789</a>
       </div>
       <logo />

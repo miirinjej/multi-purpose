@@ -1,5 +1,22 @@
 h1, h2 {
   &.heading {
-    font-size: calculate-rem(140);
+    font-size: calculate-rem(45);
+    line-height: 1;
+
+    @include mq($from: md) {
+      font-size: calculate-rem(90);
+    }
+
+    @include mq($from: lg) {
+      transform: scaleX(0.5);
+    }
+
+    @include mq($from: xl) {
+      font-size: calculate-rem(87);
+    }
+
+    @include mq($from: xxl) {
+      font-size: calculate-rem(120);
+    }
   }
 }

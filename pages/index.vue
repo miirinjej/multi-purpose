@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <top />
     <invites />
     <we-love />
