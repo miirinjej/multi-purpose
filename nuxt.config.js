@@ -38,6 +38,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~plugins/vue-animejs.js',
     '~plugins/vue-mq.js',
     { src: '~plugins/vue-carousel.js', mode: 'client' },
   ],
