@@ -137,6 +137,10 @@
       margin: 0 auto;
     }
 
+    .VueCarousel {
+      z-index: 10;
+    }
+
     .VueCarousel-wrapper {
       margin-bottom: calculate-rem(61);
     }
