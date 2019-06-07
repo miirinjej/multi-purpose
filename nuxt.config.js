@@ -41,6 +41,7 @@ export default {
     '~plugins/vue-animejs.js',
     '~plugins/vue-mq.js',
     { src: '~plugins/vue-carousel.js', mode: 'client' },
+    { src: '~plugins/vue-youtube-embed.js', mode: 'client' },
   ],
 
   /*
