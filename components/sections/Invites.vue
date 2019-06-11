@@ -133,10 +133,6 @@
 
 <style lang="scss">
   .invites-section {
-    .container {
-      margin: 0 auto;
-    }
-
     .VueCarousel {
       z-index: 10;
     }

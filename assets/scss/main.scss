@@ -6,4 +6,9 @@ $body-family: $font-family--poppins;
 $body-color: $color-name--black;
 
 
+.container.container {
+  margin: 0 auto;
+}
+
+
 @import "~bulma";

@@ -69,6 +69,7 @@ export default {
         {
           set: '@fortawesome/free-regular-svg-icons',
           icons: [
+            'faCopyright',
             'faStar',
             'faTimesCircle',
           ],
@@ -77,11 +78,16 @@ export default {
           set: '@fortawesome/free-solid-svg-icons',
           icons: [
             'faArrowDown',
+            'faCameraRetro',
             'faCaretRight',
+            'faChartLine',
             'faChevronLeft',
             'faChevronRight',
+            'faCubes',
             'faEnvelope',
             'faGraduationCap',
+            'faHeadphones',
+            'faLayerGroup',
             'faPhone',
             'faShareAlt',
             'faStar',
