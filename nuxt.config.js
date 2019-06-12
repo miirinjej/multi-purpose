@@ -40,6 +40,7 @@ export default {
   plugins: [
     '~plugins/vue-animejs.js',
     '~plugins/vue-mq.js',
+    '~plugins/webp.js',
     { src: '~plugins/vue-carousel.js', mode: 'client' },
     { src: '~plugins/vue-youtube-embed.js', mode: 'client' },
   ],
