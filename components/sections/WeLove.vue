@@ -1,5 +1,5 @@
 <template>
-  <section class="we-love-section">
+  <section class="we-love-section js-webp">
     <div class="container">
       <div class="we-love-section__content section">
         <h2
@@ -17,9 +17,6 @@
       </div>
     </div>
     <div class="we-love-section__background">
-      <div class="we-love-section__text">
-        We are unity
-      </div>
       <div
         class="we-love-section__button"
         data-aos="zoom-in"
@@ -35,57 +32,57 @@
       <picture class="we-love-section__picture">
         <source
           media="(max-width: 768px)"
-          srcset="/home/we_love/background/sm.webp"
+          srcset="/home/we_love/background/1/sm.webp"
           type="image/webp"
         >
         <source
           media="(max-width: 768px)"
-          srcset="/home/we_love/background/sm.png"
+          srcset="/home/we_love/background/1/sm.png"
           type="image/png"
         >
         <source
           media="(min-width: 769px) and (max-width: 1023px)"
-          srcset="/home/we_love/background/md.webp"
+          srcset="/home/we_love/background/1/md.webp"
           type="image/webp"
         >
         <source
           media="(min-width: 769px) and (max-width: 1023px)"
-          srcset="/home/we_love/background/md.png"
+          srcset="/home/we_love/background/1/md.png"
           type="image/png"
         >
         <source
           media="(min-width: 1024px) and (max-width: 1215px)"
-          srcset="/home/we_love/background/lg.webp"
+          srcset="/home/we_love/background/1/lg.webp"
           type="image/webp"
         >
         <source
           media="(min-width: 1024px) and (max-width: 1215px)"
-          srcset="/home/we_love/background/lg.png"
+          srcset="/home/we_love/background/1/lg.png"
           type="image/png"
         >
         <source
           media="(min-width: 1216px) and (max-width: 1407px)"
-          srcset="/home/we_love/background/xl.webp"
+          srcset="/home/we_love/background/1/xl.webp"
           type="image/webp"
         >
         <source
           media="(min-width: 1216px) and (max-width: 1407px)"
-          srcset="/home/we_love/background/xl.png"
+          srcset="/home/we_love/background/1/xl.png"
           type="image/png"
         >
         <source
           media="(min-width: 1408px)"
-          srcset="/home/we_love/background/xxl.webp"
+          srcset="/home/we_love/background/1/xxl.webp"
           type="image/webp"
         >
         <source
           media="(min-width: 1408px)"
-          srcset="/home/we_love/background/xxl.png"
+          srcset="/home/we_love/background/1/xxl.png"
           type="image/png"
         >
         <img
           class="we-love-section__image"
-          src="/home/we_love/background/xxl.png"
+          src="/home/we_love/background/1/xxl.png"
           alt="city panorama"
         >
       </picture>
@@ -160,19 +157,19 @@
     flex-direction: column;
     align-items: center;
     padding-top: calculate-rem(203);
-    background: $color-name--french-gray_base;
+    background: $color-name--french-gray_base top center no-repeat;
 
     @include mq($from: md) {
       padding-top: calculate-rem(208);
     }
-  }
 
-  .we-love-section__content {
-    position: relative;
-    z-index: 15;
-  }
+    &.no-webp {
+      background-image: url(/home/we_love/background/0/sm.jpg);
+    }
 
-  .we-love-section__heading {
+    &.webp {
+      background-image: url(/home/we_love/background/0/sm.webp);
+    }
   }
 
   .we-love-section__description {
@@ -192,24 +189,7 @@
     align-items: center;
   }
 
-  .we-love-section__text {
-    position: absolute;
-    top: calculate-rem(-54);
-    left: 50%;
-    z-index: 5;
-    align-items: center;
-    font-family: $font-family--scheherazade;
-    font-size: calculate-rem(600);
-    color: $color-name--bombay;
-    text-transform: uppercase;
-    white-space: nowrap;
-    user-select: none;
-    transform: translateX(-50%) scaleX(0.5);
-  }
-
   .we-love-section__button {
-    position: relative;
-    z-index: 10;
     width: calculate-rem(308);
     height: calculate-rem(308);
     cursor: pointer;

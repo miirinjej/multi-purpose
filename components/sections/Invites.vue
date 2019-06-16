@@ -154,10 +154,6 @@
 
 <style lang="scss">
   .invites-section {
-    .VueCarousel {
-      z-index: 10;
-    }
-
     .VueCarousel-wrapper {
       margin-bottom: calculate-rem(61);
     }
