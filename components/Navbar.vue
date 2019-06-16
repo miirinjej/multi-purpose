@@ -102,6 +102,11 @@
         isActive: false,
       };
     },
+    watch: {
+      $route() {
+        this.isActive = false;
+      },
+    },
   };
 </script>
 
