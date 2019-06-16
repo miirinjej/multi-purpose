@@ -1,14 +1,14 @@
 h1, h2 {
+  @include mq($from: lg) {
+    transform: scaleX(0.5);
+  }
+
   &.heading {
     font-size: calculate-rem(45);
     line-height: 1;
 
     @include mq($from: md) {
       font-size: calculate-rem(90);
-    }
-
-    @include mq($from: lg) {
-      transform: scaleX(0.5);
     }
 
     @include mq($from: xl) {

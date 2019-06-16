@@ -1,14 +1,27 @@
 <template>
   <section class="testimonials-section section js-webp">
     <div class="container">
-      <h2 class="testimonials-section__heading heading">
+      <h2
+        class="testimonials-section__heading heading"
+        :data-aos="$mq === 'lg' || $mq === 'xl' || $mq === 'xxl' ? 'new-fade-up' : 'fade-up'"
+      >
         Global company with a local feel.
       </h2>
-      <p class="testimonials-section__description">
+      <p
+        class="testimonials-section__description"
+        :data-aos="$mq === 'lg' || $mq === 'xl' || $mq === 'xxl' ? 'new-fade-up' : 'fade-up'"
+      >
         We help forward-thinking clients succeed in digital culture with work that invites active attention.
       </p>
-      <div class="ruler ruler--vertical"></div>
-      <h3 class="testimonials-section__sub-heading">
+      <div
+        class="ruler ruler--vertical"
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+      ></div>
+      <h3
+        class="testimonials-section__sub-heading"
+        data-aos="fade-up"
+      >
         What our customers are saying...
       </h3>
       <no-ssr placeholder="Loading...">
@@ -20,6 +33,8 @@
           :pagination-padding="12"
           :pagination-size="8"
           :per-page-custom="[[0, 1], [769, 2], [1024, 3]]"
+          data-aos="fade-up"
+          data-aos-delay="300"
         >
           <slide
             v-for="(testimonial, index) in testimonials"
@@ -326,6 +341,20 @@
 
     .testimonials-section__card:hover & {
       color: $color-name--web-orange;
+    }
+  }
+
+  [data-aos="new-fade-up"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transform: translateY(100px) scaleX(0.5);
+
+    &.aos-animate {
+      opacity: 1;
+    }
+
+    &.aos-animate {
+      transform: translateY(0) scaleX(0.5);
     }
   }
 </style>

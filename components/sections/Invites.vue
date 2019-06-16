@@ -1,16 +1,29 @@
 <template>
   <section class="invites-section">
     <header class="invites-section__header">
-      <div class="invites-section__number">
+      <div
+        class="invites-section__number"
+        data-aos="new-fade-down"
+      >
         01.
       </div>
-      <h2 class="invites-section__heading heading">
+      <h2
+        class="invites-section__heading heading"
+        :data-aos="$mq === 'xl' || $mq === 'xxl' ? 'new-fade-down' : 'fade-down'"
+      >
         Invites<br v-if="$mq !== 'sm'"> active attention
       </h2>
-      <p class="invites-section__description">
+      <p
+        class="invites-section__description"
+        :data-aos="$mq === 'xl' || $mq === 'xxl' ? 'new-fade-down' : 'fade-down'"
+      >
         That’s why we invent, and <br v-if="$mq === 'sm'"> build digital campaigns
       </p>
-      <picture class="invites-section__picture">
+      <picture
+        class="invites-section__picture"
+        data-aos="fade-left"
+        data-aos-anchor-placement="center-bottom"
+      >
         <source
           media="(min-width: 1024px)"
           srcset="/home/invites/header/lg.webp"
@@ -32,10 +45,17 @@
       <div class="section">
         <div class="invites-section__content">
           <div class="invites-section__promo promo">
-            <div class="promo__title">
+            <div
+              class="promo__title"
+              :data-aos="$mq === 'xxl' ? 'fade-right' : 'fade-up'"
+            >
               Complexity should be secret
             </div>
-            <p class="promo__description">
+            <p
+              class="promo__description"
+              :data-aos="$mq === 'xxl' ? 'fade-left' : 'fade-up'"
+              :data-aos-delay="$mq === 'xxl' ? '300' : '0'"
+            >
               We know you have a story to tell. You want the world to embrace your incredible ideas, products, and
               services. Trouble is, you're not sure about the best way to get your message across. No problem. We do.
             </p>
@@ -48,6 +68,7 @@
                 :pagination-padding="12"
                 :pagination-size="8"
                 :per-page-custom="[[0, 1], [769, 2], [1024, 3]]"
+                data-aos="fade-up"
               >
                 <slide
                   v-for="(feature, index) in features"
@@ -223,10 +244,12 @@
   .invites-section__heading {
     margin-bottom: calculate-rem(25);
     text-align: left;
+    transform: none;
 
     @include mq($from: xl) {
       margin-left: calculate-rem(-150);
       white-space: nowrap;
+      transform: scaleX(0.5);
     }
 
     @include mq($from: xxl) {
@@ -236,11 +259,6 @@
     &.heading {
       font-size: calculate-rem(65);
       line-height: 0.7;
-      transform: none;
-
-      @include mq($from: xl) {
-        transform: scaleX(0.5);
-      }
 
       @include mq($from: xxl) {
         font-size: calculate-rem(120);
@@ -347,6 +365,20 @@
 
     @include mq($from: xxl) {
       width: 80%;
+    }
+  }
+
+  [data-aos="new-fade-down"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transform: translateY(-100px) scaleX(0.5);
+
+    &.aos-animate {
+      opacity: 1;
+    }
+
+    &.aos-animate {
+      transform: translateY(0) scaleX(0.5);
     }
   }
 </style>

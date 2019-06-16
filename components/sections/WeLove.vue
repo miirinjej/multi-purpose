@@ -2,10 +2,16 @@
   <section class="we-love-section">
     <div class="container">
       <div class="we-love-section__content section">
-        <h2 class="we-love-section__heading heading">
+        <h2
+          class="we-love-section__heading heading"
+          :data-aos="$mq === 'xl' || $mq === 'xxl' ? 'new-fade-up' : 'fade-up'"
+        >
           We love our clients
         </h2>
-        <p class="we-love-section__description">
+        <p
+          class="we-love-section__description"
+          data-aos="fade-up"
+        >
           We take provide in delivering Intelligent Designs and Engaging Experiences for clients all over the World.
         </p>
       </div>
@@ -16,6 +22,8 @@
       </div>
       <div
         class="we-love-section__button"
+        data-aos="zoom-in"
+        data-aos-delay="300"
         @click="play"
       >
         <div class="we-love-section__circle-layer">
@@ -243,5 +251,19 @@
   .youtube {
     display: flex;
     justify-content: center;
+  }
+
+  [data-aos="new-fade-up"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transform: translateY(100px) scaleX(0.5);
+
+    &.aos-animate {
+      opacity: 1;
+    }
+
+    &.aos-animate {
+      transform: translateY(0) scaleX(0.5);
+    }
   }
 </style>

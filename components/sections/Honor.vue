@@ -1,7 +1,11 @@
 <template>
   <section class="honor-section">
     <header class="honor-section__header">
-      <picture class="honor-section__picture">
+      <picture
+        class="honor-section__picture"
+        :data-aos="$mq === 'lg' ? 'fade-left' : 'fade-right'"
+        data-aos-anchor-placement="center-bottom"
+      >
         <source
           media="(min-width: 1024px)"
           srcset="/home/honor/header/lg.webp"
@@ -18,13 +22,22 @@
           alt="basket with pencils"
         >
       </picture>
-      <h2 class="honor-section__heading heading">
+      <h2
+        class="honor-section__heading heading"
+        :data-aos="$mq === 'xl' || $mq === 'xxl' ? 'new-fade-down' : 'fade-down'"
+      >
         Honor the details
       </h2>
-      <p class="honor-section__description">
+      <p
+        class="honor-section__description"
+        :data-aos="$mq === 'xl' || $mq === 'xxl' ? 'new-fade-down' : 'fade-down'"
+      >
         For the global service design network
       </p>
-      <div class="honor-section__number">
+      <div
+        class="honor-section__number"
+        data-aos="new-fade-down"
+      >
         02.
       </div>
     </header>
@@ -107,12 +120,14 @@
   .honor-section__heading {
     margin-bottom: calculate-rem(25);
     text-align: left;
+    transform: none;
 
     @include mq($from: xl) {
       width: 174.28571428571%;
       margin-left: calculate-rem(-150);
       text-align: right;
       white-space: nowrap;
+      transform: scaleX(0.5);
     }
 
     @include mq($from: xxl) {
@@ -122,11 +137,6 @@
     &.heading {
       font-size: calculate-rem(65);
       line-height: 0.7;
-      transform: none;
-
-      @include mq($from: xl) {
-        transform: scaleX(0.5);
-      }
 
       @include mq($from: xxl) {
         font-size: calculate-rem(120);
@@ -169,6 +179,20 @@
       top: auto;
       bottom: calculate-rem(-177);
       left: calculate-rem(-195);
+    }
+  }
+
+  [data-aos="new-fade-down"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transform: translateY(-100px) scaleX(0.5);
+
+    &.aos-animate {
+      opacity: 1;
+    }
+
+    &.aos-animate {
+      transform: translateY(0) scaleX(0.5);
     }
   }
 </style>

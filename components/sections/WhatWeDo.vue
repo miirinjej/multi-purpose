@@ -3,7 +3,10 @@
     <div class="container">
       <div class="l-row">
         <div class="l-column l-column--first">
-          <div class="what-we-do-section__square-layer"></div>
+          <div
+            class="what-we-do-section__square-layer"
+            data-aos="fade-up"
+          ></div>
           <no-ssr placeholder="Loading...">
             <div class="carousel">
               <carousel
@@ -11,6 +14,7 @@
                 :loop="true"
                 :pagination-enabled="false"
                 :per-page="1"
+                data-aos="fade-up"
                 @page-change="descriptionIsVisible = true"
               >
                 <slide
@@ -64,7 +68,10 @@
                   </transition>
                 </slide>
               </carousel>
-              <nav class="navigation">
+              <nav
+                class="navigation"
+                data-aos="fade-up"
+              >
                 <div
                   class="navigation__button button button--circle"
                   aria-label="Previous slide"
@@ -90,14 +97,22 @@
               </nav>
             </div>
           </no-ssr>
-          <div class="what-we-do-section__number">
+          <div
+            class="what-we-do-section__number"
+            data-aos="new-fade-down"
+          >
             03.
           </div>
         </div>
         <div class="l-column l-column--second">
           <div class="what-we-do-section__services services">
             <ul class="services__list services__list--first">
-              <li class="services__item">
+              <li
+                class="services__item"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <fa
                   class="services__icon"
                   icon="headphones"
@@ -105,7 +120,12 @@
                 />
                 <span class="services__name">Campaign creative</span>
               </li>
-              <li class="services__item">
+              <li
+                class="services__item"
+                data-aos="fade-up"
+                :data-aos-delay="$mq === 'xxl'? '200' : '100'"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <fa
                   class="services__icon"
                   :icon="['far', 'copyright']"
@@ -113,7 +133,12 @@
                 />
                 <span class="services__name">Copywriting</span>
               </li>
-              <li class="services__item">
+              <li
+                class="services__item"
+                data-aos="fade-up"
+                :data-aos-delay="$mq === 'xxl'? '300' : '100'"
+                data-aos-anchor-placement="top-bottom"
+              >
                 <fa
                   class="services__icon"
                   icon="layer-group"
@@ -123,7 +148,13 @@
               </li>
             </ul>
             <ul class="services__list services__list--second">
-              <li class="services__item">
+              <li
+                class="services__item"
+                data-aos="fade-up"
+                :data-aos-delay="$mq === 'xxl'? '100' : '100'"
+                :data-aos-anchor-placement="$mq === 'xxl'? 'top-center' : 'top-bottom'"
+                :data-aos-offset="$mq === 'xxl'? '-20' : '120'"
+              >
                 <fa
                   class="services__icon"
                   icon="camera-retro"
@@ -131,7 +162,13 @@
                 />
                 <span class="services__name">Photography</span>
               </li>
-              <li class="services__item">
+              <li
+                class="services__item"
+                data-aos="fade-up"
+                :data-aos-delay="$mq === 'xxl'? '200' : '100'"
+                :data-aos-anchor-placement="$mq === 'xxl'? 'top-center' : 'top-bottom'"
+                :data-aos-offset="$mq === 'xxl'? '-20' : '120'"
+              >
                 <fa
                   class="services__icon"
                   icon="cubes"
@@ -139,7 +176,13 @@
                 />
                 <span class="services__name">3D/VFX/Post</span>
               </li>
-              <li class="services__item">
+              <li
+                class="services__item"
+                data-aos="fade-up"
+                :data-aos-delay="$mq === 'xxl'? '300' : '100'"
+                :data-aos-anchor-placement="$mq === 'xxl'? 'top-center' : 'top-bottom'"
+                :data-aos-offset="$mq === 'xxl'? '-20' : '120'"
+              >
                 <fa
                   class="services__icon"
                   icon="chart-line"
@@ -502,5 +545,19 @@
   .services__icon {
     margin-right: calculate-rem(5);
     color: $color-name--matterhorn;
+  }
+
+  [data-aos="new-fade-down"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transform: translateY(-100px) scaleX(0.5);
+
+    &.aos-animate {
+      opacity: 1;
+    }
+
+    &.aos-animate {
+      transform: translateY(0) scaleX(0.5);
+    }
   }
 </style>

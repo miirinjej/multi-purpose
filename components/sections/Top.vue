@@ -1,85 +1,146 @@
 <template>
-  <section class="top-section js-webp">
-    <div class="container">
-      <div class="section">
-        <h1 class="top-section__heading heading">
-          Honor the details.
-        </h1>
-        <p class="top-section__description">
-          We bring your products or services across in ways that make people feel good as they engage with your business
-        </p>
-        <div class="top-section__scroll scroll">
-          <div class="scroll__ellipse-layer">
-            <div class="scroll__circle-layer"></div>
+  <div class="l-container">
+    <section class="top-section js-webp js-fade js-outer-fade">
+      <div class="container">
+        <div class="section">
+          <h1 class="top-section__heading heading js-fade js-inner-fade js-inner-fade--first">
+            Honor the details.
+          </h1>
+          <p class="top-section__description js-fade js-inner-fade js-inner-fade--second">
+            We bring your products or services across in ways that make people feel good as they engage with your
+            business
+          </p>
+          <div class="top-section__scroll scroll js-fade js-outer-fade-up">
+            <div class="scroll__ellipse-layer">
+              <div class="scroll__circle-layer"></div>
+            </div>
+            <div class="js-fade js-inner-fade-up">
+              Scroll down
+            </div>
           </div>
-          Scroll down
         </div>
       </div>
-    </div>
-    <aside class="top-section__sidebar">
-      <div class="top-section__copyright">
-        Copyright 2016, unity template
-      </div>
-      <div class="l-column">
-        <div class="top-section__follow follow">
-          <a
-            class="top-section__link follow__item"
-            href="https://www.facebook.com/"
-            rel="noopener"
-            target="_blank"
-          >
-            Facebook
-          </a>
-          <a
-            class="top-section__link follow__item"
-            href="https://twitter.com/"
-            rel="noopener"
-            target="_blank"
-          >
-            Twitter
-          </a>
-          <a
-            class="top-section__link follow__item"
-            href="https://www.instagram.com/"
-            rel="noopener"
-            target="_blank"
-          >
-            Instagram
-          </a>
-          <a
-            class="top-section__link follow__item"
-            href="https://www.youtube.com/"
-            rel="noopener"
-            target="_blank"
-          >
-            Youtube
-          </a>
+      <aside class="top-section__sidebar">
+        <div class="top-section__copyright">
+          Copyright 2016, unity template
         </div>
-        <div class="top-section__phone phone">
-          <a
-            class="phone__link"
-            href="tel:+0800456789"
-            target="_blank"
-          >
-            <fa
-              class="phone__icon"
-              icon="phone"
-              rotation="270"
-            />
-          </a>
+        <div class="l-column">
+          <div class="top-section__follow follow">
+            <a
+              class="top-section__link follow__item"
+              href="https://www.facebook.com/"
+              rel="noopener"
+              target="_blank"
+            >
+              Facebook
+            </a>
+            <a
+              class="top-section__link follow__item"
+              href="https://twitter.com/"
+              rel="noopener"
+              target="_blank"
+            >
+              Twitter
+            </a>
+            <a
+              class="top-section__link follow__item"
+              href="https://www.instagram.com/"
+              rel="noopener"
+              target="_blank"
+            >
+              Instagram
+            </a>
+            <a
+              class="top-section__link follow__item"
+              href="https://www.youtube.com/"
+              rel="noopener"
+              target="_blank"
+            >
+              Youtube
+            </a>
+          </div>
+          <div class="top-section__phone phone">
+            <a
+              class="phone__link"
+              href="tel:+0800456789"
+              target="_blank"
+            >
+              <fa
+                class="phone__icon"
+                icon="phone"
+                rotation="270"
+              />
+            </a>
+          </div>
         </div>
-      </div>
-    </aside>
-  </section>
+      </aside>
+    </section>
+  </div>
 </template>
 
 <script>
   export default {
     name: 'Top',
+    mounted() {
+      const fadeElements = document.querySelectorAll('.js-fade');
+
+      fadeElements.forEach(el => el.classList.add('is-unseen'));
+
+
+      this
+        .$anime
+        .timeline()
+        .add({
+          targets: '.js-outer-fade',
+          opacity: 1,
+          easing: 'linear',
+          duration: 1000,
+        })
+        .add({
+          targets: '.js-inner-fade--first',
+          opacity: 1,
+          easing: 'linear',
+          duration: 1000,
+        })
+        .add({
+          targets: '.js-inner-fade--second',
+          opacity: 1,
+          easing: 'linear',
+          duration: 1000,
+        })
+        .add({
+          targets: '.js-outer-fade-up',
+          opacity: 1,
+          easing: 'linear',
+          duration: 1000,
+        }, 3000)
+        .add({
+          targets: '.js-outer-fade-up',
+          translateY: [ 50, 0 ],
+          easing: 'linear',
+          duration: 400,
+        }, 3000)
+        .add({
+          targets: '.js-inner-fade-up',
+          opacity: 1,
+          easing: 'linear',
+          duration: 1000,
+        }, 3200)
+        .add({
+          targets: '.js-inner-fade-up',
+          translateY: [ 50, 0 ],
+          easing: 'linear',
+          duration: 800,
+        }, 3400);
+    },
   };
 </script>
 
 <style lang="scss" scoped>
+  .l-container {
+    background: $color-name--cod-gray;
+  }
+
   .top-section {
     position: relative;
     display: flex;
@@ -297,5 +358,9 @@
     &:hover {
       color: $color-name--web-orange;
     }
+  }
+
+  .is-unseen {
+    opacity: 0;
   }
 </style>
