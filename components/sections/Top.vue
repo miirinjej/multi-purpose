@@ -64,6 +64,7 @@
               class="phone__link"
               href="tel:+0800456789"
               target="_blank"
+              aria-label="Phone number"
             >
               <fa
                 class="phone__icon"
