@@ -131,6 +131,9 @@
           translateY: [ 50, 0 ],
           easing: 'linear',
           duration: 800,
+          complete() {
+            fadeElements.forEach(el => el.classList.remove('is-unseen'));
+          },
         }, 3400);
     },
   };
