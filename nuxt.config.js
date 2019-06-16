@@ -119,7 +119,6 @@ export default {
       families: [
         'Scheherazade',
         'Neuton',
-        'Lato:300',
         'PT+Sans',
         'Poppins:300,400',
         'Roboto:300,400,500,700',
