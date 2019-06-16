@@ -62,7 +62,9 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
     font-size: calculate-rem(30);
+    text-align: center;
     transform: translate(-50%, -50%);
   }
 
