@@ -85,6 +85,7 @@ export default {
             'faChartLine',
             'faChevronLeft',
             'faChevronRight',
+            'faChevronUp',
             'faCubes',
             'faEnvelope',
             'faGraduationCap',
